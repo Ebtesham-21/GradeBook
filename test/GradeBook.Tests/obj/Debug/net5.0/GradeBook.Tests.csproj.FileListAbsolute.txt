@@ -98,3 +98,10 @@ C:\Users\Ebtesham-21\gradebook\test\GradeBook.Tests\obj\Debug\net5.0\GradeBook.T
 C:\Users\Ebtesham-21\gradebook\test\GradeBook.Tests\obj\Debug\net5.0\ref\GradeBook.Tests.dll
 C:\Users\Ebtesham-21\gradebook\test\GradeBook.Tests\obj\Debug\net5.0\GradeBook.Tests.pdb
 C:\Users\Ebtesham-21\gradebook\test\GradeBook.Tests\obj\Debug\net5.0\GradeBook.Tests.genruntimeconfig.cache
+C:\Users\Ebtesham-21\gradebook\test\GradeBook.Tests\bin\Debug\net5.0\CoverletSourceRootsMapping
+C:\Users\Ebtesham-21\gradebook\test\GradeBook.Tests\bin\Debug\net5.0\GradeBook.deps.json
+C:\Users\Ebtesham-21\gradebook\test\GradeBook.Tests\bin\Debug\net5.0\GradeBook.runtimeconfig.json
+C:\Users\Ebtesham-21\gradebook\test\GradeBook.Tests\bin\Debug\net5.0\GradeBook.runtimeconfig.dev.json
+C:\Users\Ebtesham-21\gradebook\test\GradeBook.Tests\bin\Debug\net5.0\GradeBook.exe
+C:\Users\Ebtesham-21\gradebook\test\GradeBook.Tests\bin\Debug\net5.0\GradeBook.dll
+C:\Users\Ebtesham-21\gradebook\test\GradeBook.Tests\bin\Debug\net5.0\GradeBook.pdb

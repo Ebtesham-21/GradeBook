@@ -3,40 +3,97 @@ using System.Collections.Generic;
 using System.Diagnostics;
 namespace GradeBook
 {
-    class Book
+    public class Book
     {
         public Book(string name)
         {
             grades = new List<double>();
-            this.name = name;
+            Name = name;
+
+        }
+
+        public void AddLetterGrade(char letter)
+        {
+            switch (letter)
+            {
+                case 'A':
+                    AddGrade(90);
+                    break;
+
+                case 'B':
+                    AddGrade(80);
+                    break;
+
+                case 'C':
+                    AddGrade(70);
+                    break;
+
+                default:
+                    AddGrade(0);
+                    break;
+            }
+
 
         }
 
         public void AddGrade(double grade)
         {
-            grades.Add(grade);
-        }
-        public void ShowStatistics()
-        {
-            var results = 0.0;
-            var highGrade = double.MinValue;
-            var lowGrade = double.MaxValue;
-
-            foreach (var number in grades)
+            if (grade <= 100 && grade >= 0)
             {
-                lowGrade = System.Math.Min(number, lowGrade);
-                highGrade = System.Math.Max(number, highGrade);
-                results += number;
+                grades.Add(grade);
+
             }
-            results /= grades.Count;
-            System.Console.WriteLine($"The lowest grade is {lowGrade}");
-            Console.WriteLine($"The highest grade is {highGrade}");
-            Console.WriteLine($"avarage grade is {results:N2}");
+            else
+            {
+                throw new ArgumentException($"Invalid {nameof(grade)}");
+            }
+        }
+        public Statistics GetStatistics()
+        {
+            var result = new Statistics();
+            result.Avarage = 0.0;
+            result.Avarage = 0.0;
+            result.High = double.MinValue;
+            result.Low = double.MaxValue;
+
+
+
+
+            for (var index = 0; index < grades.Count; index += 1)
+            {
+                result.Low = System.Math.Min(grades[index], result.Low);
+                result.High = System.Math.Max(grades[index], result.High);
+                result.Avarage += grades[index];
+
+            }
+            result.Avarage /= grades.Count;
+
+            switch (result.Avarage)
+            {
+                case var d when d >= 90.0:
+                    result.Letter = 'A';
+                    break;
+                case var d when d >= 80.0:
+                    result.Letter = 'B';
+                    break;
+                case var d when d >= 70.0:
+                    result.Letter = 'C';
+                    break;
+                case var d when d >= 60.0:
+                    result.Letter = 'D';
+                    break;
+                default:
+                    result.Letter = 'F';
+                    break;
+
+            }
+            return result;
+
 
         }
 
         private List<double> grades;
-        private string name;
+        public string Name;
 
 
 
